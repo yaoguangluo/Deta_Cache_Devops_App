@@ -4,7 +4,6 @@ import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JApplet;
-
 public class App extends JApplet implements MouseListener, KeyListener{	
 	private static final long serialVersionUID = 1L;
 	public void init(){
