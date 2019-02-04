@@ -14,6 +14,10 @@ public class OSGI_rigester{
 		objectInterface arffTransferNode = new arffTransferNodeInterface();
 		first = link.addNode(first,arffTransferNode);
 		
+//		以后写了新节点 就
+//		objectInterface 运维第一个Node = new 运维第一个NodeInterface();
+//		first = link.addNode(first， 运维第一个Nod);
+		
 		return first;	
 	}
 	
