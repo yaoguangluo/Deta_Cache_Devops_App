@@ -49,7 +49,6 @@ import org.LYG.GUI.platForm.unicornJSplitPane;
 public class GUIsample3 extends JApplet implements MouseMotionListener, MouseListener,ItemListener,ActionListener,Runnable{	
 	private static final long serialVersionUID = 5270675501794340912L;
 	public GUIsample3() {
-		//getContentPane().setBackground(new Color(218,112,214));
 		getContentPane().setBackground(new Color(255,255,255));
 	}
 	public int w,h;
