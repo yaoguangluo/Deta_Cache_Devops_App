@@ -15,7 +15,7 @@ public class CacheInfoNodeView extends objectView{
 	}
 	public void view(){
 		jsp = new ScrollPane();
-		jp=new Panel();
+		jp = new Panel();
 		jp.setBackground(Color.yellow);	
 		//
 		JScrollPane j = new JScrollPane();

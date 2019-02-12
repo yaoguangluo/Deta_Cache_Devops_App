@@ -2,6 +2,8 @@ package org.cache.devops.getCacheInfo;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
 
 import org.LYG.GUI.OSGI.*;
 
@@ -20,33 +22,25 @@ public class CacheInfoNodePanel extends objectPanel{
 		jp=new Panel();
 		jp.setLayout(null);
 		jp.setBackground(Color.white);
-		JButton button = new JButton("Finish");
-		button.setBounds(0, 0, 100, 30);
-		button.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){
-            	System.out.println(e.getSource());
-                	close=true;
-                	thisrun.value=1;
-            }
-        });   
+
+		//add new connection
+		JLabel label= new JLabel("≤‚ ‘¡¥Ω”£∫");
+		label.setBounds(2, 2, 80, 30);
 		
-		jp.add(button);
-		JButton readfile= new JButton("Write File");
-		readfile.setBounds(0, 35, 100, 65);
-		readfile.addActionListener(new ActionListener(){
-			public void actionPerformed(ActionEvent arg0) {
-				 filedialog=new FileDialog(new Frame(),"filechoose",FileDialog.LOAD);
-				 filedialog.setVisible(true);
-				 thisrun.filepath=filedialog.getDirectory()+filedialog.getFile();
-			     System.out.println(thisrun.filepath);
-				}
-			});
+		JTextField ipport= new JTextField("xxx.xxx.xxx.xxx:xxxxx", 18);
+		ipport.setBounds(2+85, 2, 200, 30);
 		
-		jp.add(readfile);
+		JButton jbutton=new JButton("»∑∂®");
+		jbutton.setBounds(2, 2+35, 80, 30);
+		
+		jp.add(label);
+		jp.add(ipport);
+		jp.add(jbutton);
+
 		jsp.add(jp);
 		close=false;
 		this.setClosable(true);
- 	}
+	}
 	public void config(){    
 		System.out.println("configued");      
 	}

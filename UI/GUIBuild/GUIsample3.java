@@ -221,7 +221,7 @@ public class GUIsample3 extends JApplet implements MouseMotionListener, MouseLis
 							e1.printStackTrace();
 						} 
 						node.thisface.thispanel.setLocation(node.x, node.y);
-						node.thisface.thispanel.setSize(300, 300);//setBounds(0, 0, node.x+300,node.y+200);
+						node.thisface.thispanel.setSize(600, 480);//setBounds(0, 0, node.x+300,node.y+200);
 						node.thisface.thispanel.setResizable(true);
 						node.thisface.thispanel.setClosable(true);
 						node.thisface.thispanel.jsp.setBounds(0, 0, node.thisface.thispanel.getWidth() - 10
@@ -241,7 +241,7 @@ public class GUIsample3 extends JApplet implements MouseMotionListener, MouseLis
 								e1.printStackTrace();
 							} 
 							node.thisface.thispanel.setLocation(node.x, node.y);
-							node.thisface.thispanel.setSize(300, 300);//setBounds(0, 0, node.x+300,node.y+200);
+							node.thisface.thispanel.setSize(600, 480);//setBounds(0, 0, node.x+300,node.y+200);
 							node.thisface.thispanel.setResizable(true);
 							node.thisface.thispanel.setClosable(true);node.thisface.thispanel.jsp.setBounds(0, 0
 									, node.thisface.thispanel.getWidth()-10, node.thisface.thispanel.getHeight()-45);
@@ -495,23 +495,23 @@ public class GUIsample3 extends JApplet implements MouseMotionListener, MouseLis
 			currentx=e.getX();
 			currenty=e.getY();
 			LinkNode node=new LinkNode();
-			first=new Sort().sort(first);
-			node=first;
+			first = new Sort().sort(first);
+			node = first;
 			Graphics g = getGraphics();
 			Graphics2D g2 = (Graphics2D)g;
 			g2.setColor(Color.black);
-			if(node!=null){
-				if(node.leftchoose&&!node.rightchoose){
+			if(node != null){
+				if(node.leftchoose && !node.rightchoose){
 					node.setxy(e.getX(),e.getY());
 					new DynamicLineUpdater().exec(first,node);
 					this.update();
 				}
-				if(!node.leftchoose&&node.rightchoose){	 
+				if(!node.leftchoose && node.rightchoose){	 
 					new DrawArrow(g2,oldx, oldy, e.getX(), e.getY());
 					this.update(g);
 				}	
-				while(node.next!=null){
-					node=node.next;
+				while(node.next != null){
+					node = node.next;
 					if(node.leftchoose&&!node.rightchoose){	
 						node.setxy(e.getX(),e.getY());
 						new DynamicLineUpdater().exec(first,node);
