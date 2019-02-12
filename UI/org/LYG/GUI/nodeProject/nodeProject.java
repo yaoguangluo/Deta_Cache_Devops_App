@@ -12,7 +12,7 @@ public class nodeProject extends JScrollPane {
 	public MyPanel jPanel;
 	public Image img;
 	public nodeProject() {
-		images =new ImageIcon(this.getClass().getResource("LUO.jpg"));
+		images =new ImageIcon(this.getClass().getResource("china.gif"));
 		img = images.getImage(); 
 		jPanel=new MyPanel();
 		jPanel.repaint();

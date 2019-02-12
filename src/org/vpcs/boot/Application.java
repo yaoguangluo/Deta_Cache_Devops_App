@@ -5,7 +5,7 @@ import javax.swing.JFrame;
 import GUIBuild.GUIsample3;
 public class Application{
 	public static GUIsample3 NE;
-	@SuppressWarnings({"deprecation", "resource", "unused"})
+	@SuppressWarnings({"deprecation"})
 	public static void main(String args[]) throws Exception{
 		NE = new GUIsample3(); 
 		JFrame frame = new JFrame("VPCS 开源运维架构");
