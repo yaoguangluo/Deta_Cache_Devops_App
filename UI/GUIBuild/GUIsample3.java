@@ -46,22 +46,23 @@ import org.LYG.GUI.nodeProject.nodeProject;
 import org.LYG.GUI.nodeView.cacuString;
 import org.LYG.GUI.nodeView.nodeShow;
 import org.LYG.GUI.platForm.unicornJSplitPane;
-public class GUIsample3 extends JApplet implements MouseMotionListener, MouseListener,ItemListener,ActionListener,Runnable{	
+public class GUIsample3 extends JApplet implements MouseMotionListener, MouseListener
+, ItemListener, ActionListener, Runnable{	
 	private static final long serialVersionUID = 5270675501794340912L;
 	public GUIsample3() {
 		getContentPane().setBackground(new Color(255,255,255));
 	}
-	public int w,h;
-	int flash=0;
-	int count=0;
+	public int w, h;
+	int flash = 0;
+	int count = 0;
 	String currentNodeName;
 	int currentNodeID;
 	LinkList thislist;
 	LinkNode first;
-	int currentx,currenty;
-	int choose=0;
-	int oldx,oldy;
-	int newx,newy;
+	int currentx, currenty;
+	int choose = 0;
+	int oldx, oldy;
+	int newx, newy;
 	int isOperation = 0;
 	String treeNodeName;
 	nodeShow nodeview;
@@ -75,19 +76,19 @@ public class GUIsample3 extends JApplet implements MouseMotionListener, MouseLis
 	JScrollPane rightdownscrollPane;
 	JScrollPane rightrightscrollPane;
 	thisCanvas canvas;
-	PopupMenu popupMenu1,nodeMenu,itemMenu;
+	PopupMenu popupMenu1, nodeMenu, itemMenu;
 	MenuItem menuItem1;
-	MenuItem configre,run,show,dnode,dline;
-	Thread thread,thread1; 
+	MenuItem configre, run, show, dnode, dline;
+	Thread thread, thread1; 
 	public void run() {
 		try {
 			Thread.sleep(100);
 		} catch (InterruptedException e1) {
 			e1.printStackTrace();
 		}
-		nodeproject.setBounds(0, 0,leftsplitPane.getWidth(),leftsplitPane.getDividerLocation());
+		nodeproject.setBounds(0, 0, leftsplitPane.getWidth(), leftsplitPane.getDividerLocation());
 		nodeproject.jPanel.newimg = nodeproject.img.getScaledInstance(nodeproject.getWidth()
-				,nodeproject.getHeight(),java.awt.Image.SCALE_SMOOTH );
+				, nodeproject.getHeight(), java.awt.Image.SCALE_SMOOTH);
 		nodeproject.jPanel.update(getGraphics());
 		nodeproject.validate();
 		while(true){   
@@ -104,6 +105,7 @@ public class GUIsample3 extends JApplet implements MouseMotionListener, MouseLis
 			thread.start();
 		}
 	}
+	
 	public void stop() {
 	}
 
@@ -121,6 +123,7 @@ public class GUIsample3 extends JApplet implements MouseMotionListener, MouseLis
 				}  
 			}  
 		});  
+		
 		mainsplitPane.addPropertyChangeListener(new java.beans.PropertyChangeListener() {  
 			public void propertyChange(java.beans.PropertyChangeEvent evt) {  
 				if (evt.getPropertyName().equals(JSplitPane.DIVIDER_LOCATION_PROPERTY)) {  
@@ -133,6 +136,7 @@ public class GUIsample3 extends JApplet implements MouseMotionListener, MouseLis
 				}  
 			}  
 		});  
+		
 		righttopscrollPane.addComponentListener(new ComponentListener(){
 			public void componentHidden(ComponentEvent arg0) {}
 			public void componentMoved(ComponentEvent arg0) {}
@@ -141,14 +145,11 @@ public class GUIsample3 extends JApplet implements MouseMotionListener, MouseLis
 			}
 			public void componentShown(ComponentEvent arg0) {}
 		});
+		
 		getContentPane().addComponentListener(new ComponentListener(){
-
 			public void componentHidden(ComponentEvent arg0) {}
-
 			public void componentMoved(ComponentEvent arg0) {}
-
 			public void componentResized(ComponentEvent arg0) {
-				// TODO Auto-generated method stub
 				w=getContentPane().getWidth();
 				h=getContentPane().getHeight();
 				mainsplitPane.setBounds(10, 50, w-20, h-80);
@@ -164,7 +165,7 @@ public class GUIsample3 extends JApplet implements MouseMotionListener, MouseLis
 				nodeproject.validate();
 
 				mainsplitPane.validate();
-				System.out.println(w+"<>"+h);
+				System.out.println(w + "<>" + h);
 			}
 
 			public void componentShown(ComponentEvent arg0) {
@@ -223,8 +224,8 @@ public class GUIsample3 extends JApplet implements MouseMotionListener, MouseLis
 						node.thisface.thispanel.setSize(300, 300);//setBounds(0, 0, node.x+300,node.y+200);
 						node.thisface.thispanel.setResizable(true);
 						node.thisface.thispanel.setClosable(true);
-						node.thisface.thispanel.jsp.setBounds(0, 0, node.thisface.thispanel.getWidth()-10
-								, node.thisface.thispanel.getHeight()-45);
+						node.thisface.thispanel.jsp.setBounds(0, 0, node.thisface.thispanel.getWidth() - 10
+								, node.thisface.thispanel.getHeight() - 45);
 						node.thisface.thispanel.jp.setPreferredSize(new Dimension(800,600));
 						canvas.add(node.thisface.thispanel);
 						node.thisface.thispanel.setVisible(true);
@@ -232,8 +233,8 @@ public class GUIsample3 extends JApplet implements MouseMotionListener, MouseLis
 						new OSGI_chansfer(node,first);
 					}
 					while(node.next != null){
-						node=node.next;
-						if(node.name.equals(currentNodeName)&&node.ID==currentNodeID){
+						node = node.next;
+						if(node.name.equals(currentNodeName)&&node.ID == currentNodeID){
 							try {
 								node.thisface.config();
 							} catch (IOException e1) {
@@ -272,9 +273,8 @@ public class GUIsample3 extends JApplet implements MouseMotionListener, MouseLis
 						} catch (InterruptedException e3) {
 							e3.printStackTrace();
 						}     
-
 					}
-					while(node.next!=null){
+					while(null != node.next){
 						node=node.next;
 						if(node.name.equals(currentNodeName)&&node.ID==currentNodeID){
 							try {
@@ -440,27 +440,27 @@ public class GUIsample3 extends JApplet implements MouseMotionListener, MouseLis
 		public void mouseExited(MouseEvent arg0) {}
 
 		public void mousePressed(MouseEvent arg0) {
-			isOperation = 1;
-			//System.out.println(arg0.getX()+"|"+arg0.getY());
+			isOperation=1;
+			System.out.println(arg0.getX()+"|"+arg0.getY());
 			oldx = arg0.getX();
 			oldy = arg0.getY();
-			currentx = arg0.getX();
-			currenty = arg0.getY();
-			currentNodeName = new ChooseCheck().chooseCheckname(first,arg0);
-			currentNodeID = new ChooseCheck().chooseCheckid(first,arg0);
+			currentx=arg0.getX();
+			currenty=arg0.getY();
+			currentNodeName=new ChooseCheck().chooseCheckname(first,arg0);
+			currentNodeID=new ChooseCheck().chooseCheckid(first,arg0);
 		}
 
 
 		public void mouseReleased(MouseEvent arg0){
-			isOperation = 0;
-			currentx = arg0.getX();
-			currenty = arg0.getY();
-			first = new Sort().sort(first);
-			LinkNode node = new LinkNode();
-			node = first;
-			if(node != null){
-				if(node.rightchoose && !node.leftchoose){
-					if(oldx == arg0.getX() && oldy == arg0.getY()){
+			isOperation=0;
+			currentx=arg0.getX();
+			currenty=arg0.getY();
+			first=new Sort().sort(first);
+			LinkNode node=new LinkNode();
+			node=first;
+			if(node!=null){
+				if(node.rightchoose&&!node.leftchoose){
+					if(oldx==arg0.getX()&&oldy==arg0.getY()){
 						nodeMenu.show(this, arg0.getX(), arg0.getY());
 					}
 					else{
@@ -468,11 +468,11 @@ public class GUIsample3 extends JApplet implements MouseMotionListener, MouseLis
 					}
 				}
 				node.setchoose(false);
-				node.rightchoose = false;
-				while(node.next != null){
-					node = node.next;
-					if(node.rightchoose && !node.leftchoose){
-						if(oldx == arg0.getX()&&oldy==arg0.getY()){
+				node.rightchoose=false;
+				while(node.next!=null){
+					node=node.next;
+					if(node.rightchoose&&!node.leftchoose){
+						if(oldx==arg0.getX()&&oldy==arg0.getY()){
 							nodeMenu.show(this, arg0.getX(), arg0.getY());
 						}
 						else{
@@ -673,7 +673,7 @@ public class GUIsample3 extends JApplet implements MouseMotionListener, MouseLis
 		this.resize(w,h);	
 	}
 	private void CreatMap() throws IOException {
-		w=1420;
+		w=1400;
 		h=800;
 		getContentPane().setLayout(null);
 		UIManager.put("SplitPaneUI","org.LYG.GUI.platForm.unicornSplitPaneUI");
