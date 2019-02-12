@@ -15,11 +15,11 @@ public class CacheInfoNodeInterface extends objectInterface{
 		thisicon = new ImageIcon(newimg);
 	}
 	public void config() throws IOException{
-		thisview=new CacheInfoNodeView();
-		thisrun=new CacheInfoNodeRun();
-		thispanel=new CacheInfoNodePanel((CacheInfoNodeRun) thisrun);
+		thisview = new CacheInfoNodeView();
+		thisrun = new CacheInfoNodeRun();
+		thispanel = new CacheInfoNodePanel((CacheInfoNodeRun) thisrun);
 		thispanel.config();
-		showed=false;
+		showed = false;
 	}
 	public void execute()  throws FileNotFoundException, IOException{
 		((CacheInfoNodeRun) thisrun).run((CacheInfoNodeView) thisview);

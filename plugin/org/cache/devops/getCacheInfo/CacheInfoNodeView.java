@@ -18,7 +18,7 @@ public class CacheInfoNodeView extends objectView{
 		jp=new Panel();
 		jp.setBackground(Color.yellow);	
 		//
-		JScrollPane j=new JScrollPane();
+		JScrollPane j = new JScrollPane();
 		tableout.setBackground(new Color(240, 128, 128));
 		tableout.setPreferredSize(new Dimension(200,200));
 		tableout.setVisible(true);

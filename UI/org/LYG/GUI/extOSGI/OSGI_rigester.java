@@ -1,7 +1,6 @@
 package org.LYG.GUI.extOSGI;
 import java.io.IOException;
 import org.LYG.GUI.OSGI.*;
-import org.LYG.node.ai.arffTransfer.arffTransferNodeInterface;
 import org.cache.devops.getCacheInfo.CacheInfoNodeInterface;
 public class OSGI_rigester{
 	public OSGI_rigester(){
