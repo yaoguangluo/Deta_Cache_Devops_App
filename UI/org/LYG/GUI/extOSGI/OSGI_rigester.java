@@ -9,8 +9,8 @@ public class OSGI_rigester{
 	public nodeOSGI Rigester(nodeOSGI first, linkOSGI link) throws IOException{
 		//зЂВс
 		//
-		objectInterface arffTransferNode = new arffTransferNodeInterface();
-		first = link.addNode(first, arffTransferNode);
+//		objectInterface arffTransferNode = new arffTransferNodeInterface();
+//		first = link.addNode(first, arffTransferNode);
 		
 		objectInterface cacheInfoNode = new CacheInfoNodeInterface();
 		first = link.addNode(first, cacheInfoNode);
