@@ -45,6 +45,7 @@
 ##### 任务：
 ##### 任务：
 ##### 任务：
+![实例](https://github.com/yaoguangluo/Deta_Cache_Devops_App/blob/master/testconnection.png)
 
 
 
