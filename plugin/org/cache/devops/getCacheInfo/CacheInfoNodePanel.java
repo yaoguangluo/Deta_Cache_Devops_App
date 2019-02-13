@@ -21,12 +21,26 @@ public class CacheInfoNodePanel extends objectPanel{
 		//add new connection
 		JLabel label= new JLabel("测试链接：");
 		label.setBounds(2, 2, 80, 30);
-		
 		JTextField ipport= new JTextField("xxx.xxx.xxx.xxx:xxxxx", 18);
 		ipport.setBounds(2+85, 2, 200, 30);
 		
+		JLabel labelName= new JLabel("登录名称：");
+		labelName.setBounds(2, 2+35, 80, 30);
+		JTextField jTextFieldName= new JTextField("输入用户名称", 18);
+		jTextFieldName.setBounds(2+85, 2+35, 200, 30);
+		
+		JLabel labelPswd= new JLabel("登录密码：");
+		labelPswd.setBounds(2, 2+35+35, 80, 30);
+		JTextField jTextFieldPswd= new JTextField("输入用户密码", 18);
+		jTextFieldPswd.setBounds(2+85, 2+35+35, 200, 30);
+		//
 		JButton jbutton=new JButton("确定");
-		jbutton.setBounds(2, 2+35, 80, 30);
+		jbutton.setBounds(2, 2+35+35+35, 80, 30);
+		jp.add(labelName);
+		jp.add(jTextFieldName);
+		jp.add(labelPswd);
+		jp.add(jTextFieldPswd);
+		
 		
 		jp.add(label);
 		jp.add(ipport);
