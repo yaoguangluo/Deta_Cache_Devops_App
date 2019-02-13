@@ -1,20 +1,15 @@
 package org.cache.devops.getCacheInfo;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 import org.LYG.GUI.OSGI.*;
 
-import java.awt.FileDialog;
-import java.awt.Frame;
 import java.awt.Panel;
 import java.awt.ScrollPane;
 import java.awt.Color;
 public class CacheInfoNodePanel extends objectPanel{
 	private static final long serialVersionUID = 1L;
-	private FileDialog filedialog;
 	public CacheInfoNodePanel(final CacheInfoNodeRun thisrun){
 		setLayout(null);
 		jsp = new ScrollPane();
