@@ -2,9 +2,7 @@ package org.cache.devops.getCacheInfo;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-
 import org.LYG.GUI.OSGI.*;
-
 import java.awt.Panel;
 import java.awt.ScrollPane;
 import java.awt.event.ActionEvent;
@@ -12,7 +10,9 @@ import java.awt.event.ActionListener;
 import java.io.InputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.net.URLEncoder;
 import java.awt.Color;
+@SuppressWarnings("deprecation")
 public class CacheInfoNodePanel extends objectPanel{
 	private static final long serialVersionUID = 1L;
 	public CacheInfoNodePanel(final CacheInfoNodeRun thisrun){
@@ -39,34 +39,34 @@ public class CacheInfoNodePanel extends objectPanel{
 		JTextField jTextFieldPswd= new JTextField("输入用户密码", 18);
 		jTextFieldPswd.setBounds(2+85, 2+35+35, 200, 30);
 		//
-		JButton jbutton=new JButton("确定");
-		jbutton.setBounds(2, 2+35+35+35, 80, 30);
+		JButton jbutton = new JButton("确定");
+		jbutton.setBounds(2, 2 + 35 + 35 + 35, 80, 30);
 		jbutton.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent arg0) {
 				try {
-					String textOfLabelName = labelName.getText();
-					String textOflabelPswd = labelPswd.getText();
+					System.out.println("1");      
+					String textOfLabelName = jTextFieldName.getText();
+					String textOflabelPswd = jTextFieldPswd.getText();
 					String textOfIpport = ipport.getText();
 					Socket socket = new Socket(textOfIpport.split(":")[0],Integer.valueOf(textOfIpport.split(":")[1]));
 					PrintWriter os = new PrintWriter(socket.getOutputStream());
-					//os.println("/111");
+					os.println("/devopsCache?email=" + URLEncoder.encode(textOfLabelName) + "&password="+URLEncoder.encode(textOflabelPswd));
 					//添加输入值
 					os.flush();
 					InputStream is = socket.getInputStream();
 					byte[] bytes=new byte[1024];
 					while((is.read(bytes, 0, 1024)) != -1) {
-						//System.out.println("1"+new String(bytes)); 
+						System.out.println("1" + new String(bytes)); 
 						//得到输出值
 					}			
 				}catch(Exception e) {
-
+					e.printStackTrace();
 				}
 			}});
 		jp.add(labelName);
 		jp.add(jTextFieldName);
 		jp.add(labelPswd);
 		jp.add(jTextFieldPswd);
-
 
 		jp.add(label);
 		jp.add(ipport);
