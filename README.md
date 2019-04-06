@@ -50,5 +50,8 @@
 ##### 任务：
 ![实例](https://github.com/yaoguangluo/Deta_Cache_Devops_App/blob/master/testconnection.png)
 
+### 代码协作贡献者 （协作者按代码百分比享有项目各种合法权益与收益）
+鲁骏：1.25% 代码占比。日期20190220
+
 
 
