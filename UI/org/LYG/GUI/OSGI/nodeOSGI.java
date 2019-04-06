@@ -3,7 +3,7 @@ import javax.swing.ImageIcon;
 public class nodeOSGI{ 
 	public nodeOSGI next;
 	public nodeOSGI pre;
-	public objectInterface currentFace;
+	public ObjectInterface currentFace;
 	public ImageIcon thisicon;
 	public String thisname;
 	@Override  
@@ -23,7 +23,7 @@ public class nodeOSGI{
 		thisicon=null;
 		thisname=null;
 	}
-	public void addName(objectInterface thisface){
+	public void addName(ObjectInterface thisface){
 		next=null;
 		pre=null;
 		currentFace=thisface;

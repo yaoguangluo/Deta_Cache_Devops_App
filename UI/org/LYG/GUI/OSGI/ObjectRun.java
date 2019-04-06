@@ -3,9 +3,9 @@ import javax.sound.sampled.AudioInputStream;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 
-public class objectRun extends JPanel implements Cloneable{
+public class ObjectRun extends JPanel implements Cloneable{
 	private static final long serialVersionUID = 1L;
-	public objectRun addr;
+	public ObjectRun addr;
 	public JTable toptablein;
 	public int[][] topgin;
 	public AudioInputStream topaisin;
@@ -17,10 +17,10 @@ public class objectRun extends JPanel implements Cloneable{
 	public JTable downtablein;
 	public int[][] downgin;
 	public AudioInputStream downaisin;
-	public objectRun(){
+	public ObjectRun(){
 	}
 	@Override  
-	public objectRun clone() {  
+	public ObjectRun clone() {  
 		return addr;  
 	}
 }

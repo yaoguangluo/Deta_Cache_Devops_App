@@ -13,7 +13,7 @@ import java.net.Socket;
 import java.net.URLEncoder;
 import java.awt.Color;
 @SuppressWarnings("deprecation")
-public class CacheInfoNodePanel extends objectPanel{
+public class CacheInfoNodePanel extends ObjectPanel{
 	private static final long serialVersionUID = 1L;
 	public CacheInfoNodePanel(final CacheInfoNodeRun thisrun){
 		setLayout(null);
@@ -42,6 +42,7 @@ public class CacheInfoNodePanel extends objectPanel{
 		JButton jbutton = new JButton("È·¶¨");
 		jbutton.setBounds(2, 2 + 35 + 35 + 35, 80, 30);
 		jbutton.addActionListener(new ActionListener(){
+			@SuppressWarnings("resource")
 			public void actionPerformed(ActionEvent arg0) {
 				try {
 					System.out.println("1");      

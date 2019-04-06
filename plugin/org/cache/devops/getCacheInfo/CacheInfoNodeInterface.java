@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import javax.swing.*;
 import org.LYG.GUI.OSGI.*;
-public class CacheInfoNodeInterface extends objectInterface{	
+public class CacheInfoNodeInterface extends ObjectInterface{	
 	public CacheInfoNodeInterface() throws IOException{
 		thisicon = new ImageIcon(this.getClass().getResource("1.jpg"));
 		thisname = new String("CacheInfo");
@@ -28,7 +28,7 @@ public class CacheInfoNodeInterface extends objectInterface{
 		thisview.view();
 		showed=true;
 	}
-	public objectInterface luoyaoguang() throws CloneNotSupportedException, IOException {
+	public ObjectInterface luoyaoguang() throws CloneNotSupportedException, IOException {
 		stu = new CacheInfoNodeInterface();
 		return stu;  
 	}

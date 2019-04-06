@@ -11,7 +11,7 @@ public class OSGI_rigester{
 //		objectInterface arffTransferNode = new arffTransferNodeInterface();
 //		first = link.addNode(first, arffTransferNode);
 		
-		objectInterface cacheInfoNode = new CacheInfoNodeInterface();
+		ObjectInterface cacheInfoNode = new CacheInfoNodeInterface();
 		first = link.addNode(first, cacheInfoNode);
 		
 		return first;	

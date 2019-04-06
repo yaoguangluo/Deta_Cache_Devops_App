@@ -1,6 +1,6 @@
 package org.LYG.GUI.OSGI;
 public class linkOSGI{
-	public nodeOSGI addNode(nodeOSGI currentnode, objectInterface currentface) {
+	public nodeOSGI addNode(nodeOSGI currentnode, ObjectInterface currentface) {
 		if(currentnode==null){
 			currentnode=new nodeOSGI();
 			currentnode.addName(currentface);

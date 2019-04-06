@@ -1,7 +1,7 @@
 package org.cache.devops.getCacheInfo;
 import java.io.IOException;
 import org.LYG.GUI.OSGI.*;
-public class CacheInfoNodeRun extends objectRun{
+public class CacheInfoNodeRun extends ObjectRun{
 	private static final long serialVersionUID = 1L;
 	public int value = 0;
 	public String filepath;
